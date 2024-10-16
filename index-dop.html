@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: 
+                radial-gradient(ellipse closest-side, rgba(255,0,0,0.9) 0%, rgba(255,0,0,0.1) 100%);
+        }
+        .content {
+            color: white;
+            font-size: 2rem;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        Плавный градиент
+    </div>
+            <!-- Центральный калькулятор аренды -->
+            <div class="central-calr-rent">
+                <h3>Калькулятор аренды инструментов</h3>
+                <div class="central-calr-rent__box">
+                    <form name="calcrent" action="#" class="central-calr-rent-form">
+                        <div class="central-calr-rent__tools">
+                            <div class="central-calc-rent__days">
+                                <p>На сколько дней:</p>
+                                <input name="days" type="number" value="1" required>
+                            </div>
+                            <div class="central-calr-rent__tool">
+                                <p class="central-calr-rent__tool-text">Инструмент 1:</p>
+                                <select name="tool1">
+                                    <option value="0">Выберите инструмент...</option>
+                                    <option value="1" selected>Перфоратор sds-Plus</option>
+                                    <option value="2">Перфоратор sds-Max</option>
+                                    <option value="3">Отбойный молоток до 40Дж</option>
+                                    <option value="4">Болгалка(УШМ) 125мм</option>
+                                </select>
+                                <p id="cost-tool-1"></p>
+                            </div>
+                            <div class="central-calr-rent__tool">
+                                <p class="central-calr-rent__tool-text">Инструмент 2:</p>
+                                <select name="tool2">
+                                    <option value="0" selected>Выберите инструмент...</option>
+                                    <option value="1">Перфоратор sds-Plus</option>
+                                    <option value="2">Перфоратор sds-Max</option>
+                                    <option value="3">Отбойный молоток до 40Дж</option>
+                                    <option value="4">Болгалка(УШМ) 125мм</option>
+                                </select>
+                                <p id="cost-tool-2"></p>
+                            </div>
+                            <div class="central-calr-rent__tool">
+                                <p class="central-calr-rent__tool-text">Инструмент 3:</p>
+                                <select name="tool3">
+                                    <option value="0" selected>Выберите инструмент...</option>
+                                    <option value="1">Перфоратор sds-Plus</option>
+                                    <option value="2">Перфоратор sds-Max</option>
+                                    <option value="3">Отбойный молоток до 40Дж</option>
+                                    <option value="4">Болгалка(УШМ) 125мм</option>
+                                </select>
+                                <p id="cost-tool-3"></p>
+                            </div>
+                        </div>
+                        <div class="central-calr-rent__result">
+                            <h4>Результаты расчёта:</h4>
+                            <p id="how-many-tools">Инструментов: </p>
+                            <p id="how-many-days">Дней: </p>
+                            <p id="rent-all-cost">Стоимость: </p>
+                        </div>
+                    </form>              
+                </div>
+            </div>
+</body>
+</html>

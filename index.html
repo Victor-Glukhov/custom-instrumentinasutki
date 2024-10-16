@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/theme-light.css" id="theme">
+    <title>Test - Инструменты на сутки</title>
+
+</head>
+<body>
+    <div class="burger" id="burger">
+        <a href="#">
+            <img src="./img/hamburger_menu_icon.svg" alt="menu-icon">
+        </a>
+    </div>
+    <div class="left" id="left"> 
+        <div class="left__menu" id="left__menu">
+            <img src="./img/logo.png" alt="logo" class="logo">
+            <ul class="left__list">
+                <li><a href="#" class="left__menu-item">Ремонт</a></li>
+                <li><a href="#" class="left__menu-item">Аренда</a></li>
+                <li><a href="#" class="left__menu-item">Расходники</a></li>
+                <li><a href="#" class="left__menu-item">Условия аренды</a></li>
+                <li><a href="#" class="left__menu-item">Частые вопросы</a></li>
+                <li><a href="#" class="left__menu-item">Контакты</a></li>
+            </ul>
+        </div>
+        <div class="left__footer">
+            <a href="tel:+79085139244" class="left__footer__tel">+7-908-513-92-44</a>
+            <div class="footer__messengers">
+                <div class="footer__messengers__item">
+                    <a href="https://wa.me/79955065337/?text=Test-WhatsAppWebSiteПривет!%20Как%20дела">
+                        <img src="./img/whatsapp-logo-60.png" alt="logo-whatsapp">WhatsApp
+                    </a>    
+                </div>
+                <div class="footer__messengers__item">
+                    <a href="https://t.me/viktormg85">
+                        <img src="./img/telegram-logo-60.png" alt="logo-telegram">Telegram
+                    </a>
+                </div>
+            </div>
+            <p class="left__footer__rights">© 2020 — 2024</p>
+        </div>
+    </div>
+
+    <div class="center">
+        <h1 class="center__h1">Ремонт и Аренда инструментов <br>
+        Новорижский рынок</h1>
+        
+        <!-- Темная / Светлая тема -->
+         <div class="center__theme">
+            <label for="" class="center__label-theme">
+                <p>Использовать тёмную тему</p>
+                <input type="checkbox" class="theme-checkbox">
+            </label>
+         </div>
+
+        <!-- Счётчик чиним сдаём в аренду -->
+        <div class="history-work-box">
+            <div class="history-repair">
+                <h2 class="history-repair__h2">
+                    Чиним инструменты уже:
+                </h2>
+                <div class="repair__countdown" id=repair__countdown>
+                    <div class="repair__time">
+                        <h2 id="repair__years">01</h2>
+                        <small>лет</small>
+                    </div>
+                    <div class="repair__time">
+                        <h2 id="repair__months">01</h2>
+                        <small>месяцев</small>
+                    </div>
+                    <div class="repair__time">
+                        <h2 id="repair__days">01</h2>
+                        <small>дней</small>
+                    </div>
+                    <div class="repair__time">
+                        <h2 id="repair__hours">01</h2>
+                        <small>часов</small>
+                    </div>
+                    <div class="repair__time">
+                        <h2 id="repair__minutes">01</h2>
+                        <small>минут</small>
+                    </div>
+                    <div class="repair__time">
+                        <h2 id="repair__seconds">01</h2>
+                        <small>секунд</small>
+                    </div>
+                </div>
+            </div>
+            <div class="history-rent">
+                <h2 class="history-rent__h2">
+                    Сдаём инструменты в аренду уже:
+                </h2>
+    
+                <div class="rent__countdown" id=rent__countdown>
+                    <div class="rent__time">
+                        <h2 id="rent__years">01</h2>
+                        <small>года</small>
+                    </div>
+                    <div class="rent__time">
+                        <h2 id="rent__months">01</h2>
+                        <small>месяцев</small>
+                    </div>
+                    <div class="rent__time">
+                        <h2 id="rent__days">01</h2>
+                        <small>дней</small>
+                    </div>
+                    <div class="rent__time">
+                        <h2 id="rent__hours">01</h2>
+                        <small>часов</small>
+                    </div>
+                    <div class="rent__time">
+                        <h2 id="rent__minutes">01</h2>
+                        <small>минут</small>
+                    </div>
+                    <div class="rent__time">
+                        <h2 id="rent__seconds">01</h2>
+                        <small>секунд</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Центральный раздел страницы -->
+        <div class="center-main">
+            <!-- Центральная, ремонт -->
+            <div class="center-repair">
+
+                <!-- Карусель - ремонт -->
+                <div class="slider__box">
+                    <div class="slider" id="slider">
+                        <img src="img/repair-1.jpeg" alt="slide-01">
+                        <img src="img/repair-2.jpeg" alt="slide-02">
+                        <img src="img/repair-3.jpeg" alt="slide-03">
+                    </div>
+                    <div class="controls">
+                        <button class="image-button-left" id="btnPrev"></button>
+                        <button class="image-button-right" id="btnNext"></button>
+                    </div>
+                </div>
+                <div class="center-repair-rent__link">
+                    <a href="#">
+                        <p class="center-repair__p">Ремонт, обслуживание <br>
+                        <span class="link__p-semibold">Перейти в раздел - Ремонт</span></p>
+                    </a>
+                </div>
+                
+            </div>
+
+            <!-- Центральная, аренда -->
+            <div class="center-rent">
+                <div class="center-rent__items">
+                    <div class="center-rent__item item-border item-1">
+                        <img src="./img/rent-Bosch-GBH-2-28F-1024x1024.jpg" alt="foto-repair" class="center-repair__img">
+                        <p class="center__p-semibold">
+                            Перфораторы sds-plus
+                        </p>
+                    </div>
+                    <div class="center-rent__item item-border item-2">
+                        <img src="./img/rent-perf-sds-max.jpg" alt="foto-repair" class="center-repair__img">
+                        <p class="center__p-semibold">
+                            Перфораторы sds-Max
+                        </p>
+                    </div>
+                    <div class="center-rent__item item-border item-3">
+                        <img src="./img/rent-Starmix-ISC-L-1625-TOP.jpg" alt="foto-repair" class="center-repair__img">
+                        <p class="center__p-semibold">
+                            Строительные пылесосы
+                        </p>
+                    </div>
+                    <div class="center-rent__item item-border item-4">
+                        <img src="./img/rent-Makita-HM-1801-1024x555.jpg" alt="foto-repair" class="center-repair__img">
+                        <p class="center__p-semibold">
+                            Отбойные молотки
+                        </p>
+                    </div>
+                    <div class="center-rent__item item-border item-5">
+                        <img src="./img/rent-Makita-LS1019L.webp" alt="foto-repair" class="center-repair__img">
+                        <p class="center__p-semibold">
+                            Пилы
+                        </p>
+                    </div>
+                    <div class="center-rent__item item-border item-6">
+                        <img src="./img/rent-Makita-DGA504.jpg" alt="foto-repair" class="center-repair__img">
+                        <p class="center__p-semibold">
+                            Болгарки (УШМ)
+                        </p>
+                    </div>
+                </div>
+                <div class="center-repair-rent__link">
+                    <a href="#">
+                        <p class="center-rent__p">Посмотреть все категории<br>
+                        <span class="link__p-semibold">Перейти в раздел - Аренда</span></p>
+                    </a>
+                </div>
+                
+                
+                
+                <h4 class="center-rent__h4">
+                    
+                </h4>
+            </div>
+        </div>
+
+        <!-- Центральный карусель -->
+         <div class="central-carousel">
+            <div class="central-carousel__box">
+                <div class="central-carousel___image">
+                    <img src="img/central-carousel-1.jpg" alt="carousel-photo" id="cental-carousel-photo">
+                </div>
+                <div class="central-carousel__btns-box">
+                    <div class="central-carousel__btns-left central-carousel__btn" id="carousel__btn-left">
+                        <img src="img/arrow-right.png" alt="carousel button" class="central-carousel__btn-img-left">
+                    </div>
+                    <div class="central-carousel__btns-center">
+                        <div class="central-carousel__hrs">
+                            <hr class="central-carousel__hr1 active" id="central-carousel__hr1">
+                            <hr class="central-carousel__hr2" id="central-carousel__hr2">
+                            <hr class="central-carousel__hr3" id="central-carousel__hr3">
+                            <hr class="central-carousel__hr4" id="central-carousel__hr4">
+                        </div>
+                    </div>
+                    <div class="central-carousel__btns-right central-carousel__btn" id="carousel__btn-right">
+                        <img src="img/arrow-right.png" alt="carousel button">
+                    </div>
+                </div>
+            </div>
+         </div>
+
+        <!-- Центральный калькулятор аренды -->
+        <div class="central-calc-rent shadow br-15">
+            <h3>Калькулятор аренды инструментов</h3>
+            <div class="central-calc-rent__box ">
+                <form name="calcrent" action="#" class="central-calc-rent-form">
+                    <div class="central-calc-rent__tools" id="central-calc-rent__tools">
+                        <div class="central-calc-rent__days">
+                            <p class="central-calc-rent__days-p">На сколько дней:</p>
+                            <input name="days" type="number" value="1" id="daysInput" required>
+                        </div>
+                        <div class="central-calc-rent__tool">
+                            <p class="central-calc-rent__tool-text">Инструмент 1:</p>
+                            <select name="tool1">
+                                <option value="0">Выберите инструмент...</option>
+                                <option value="1" selected>Перфоратор sds-Plus</option>
+                                <option value="2">Перфоратор sds-Max</option>
+                                <option value="3">Отбойный молоток до 40Дж</option>
+                                <option value="4">Болгалка(УШМ) 125мм</option>
+                            </select>
+                            <p class="central-calc-rent__tool-text2" id="cost-tool-1"></p>
+                        </div>
+                        <div class="central-calc-rent__tool" id="central-calc-rent__tool-sample">
+                            <p class="central-calc-rent__tool-text">Инструмент 2:</p>
+                            <select name="tool2">
+                                <option value="0" selected>Выберите инструмент...</option>
+                                <option value="1">Перфоратор sds-Plus</option>
+                                <option value="2">Перфоратор sds-Max</option>
+                                <option value="3">Отбойный молоток до 40Дж</option>
+                                <option value="4">Болгалка(УШМ) 125мм</option>
+                            </select>
+                            <p class="central-calc-rent__tool-text2" id="cost-tool-2"></p>
+                        </div>
+                        <div class="central-calc-rent__add-tool" id="central-calc-rent__add-tool">
+                            <button type="button" class="central-calc-rent__btn-image" id="calcRentAddBtn">
+                                <img class="central-calc-rent__image" src="img/icon-add-button.png" alt="calculate-add-tool">
+                            </button>
+                        </div>
+                    </div>
+                    <div class="central-calc-rent__result shadow br-15">
+                        <h4>Результаты расчёта:</h4>
+                        <p id="how-many-tools">Инструментов: </p>
+                        <p id="how-many-days">Дней: </p>
+                        <p id="rent-all-cost">Стоимость: </p>
+                    </div>
+                </form>              
+            </div>
+        </div>
+
+        <!-- Форма обратной связи -->
+         <div class="form-feedback">
+            <form action="#" id="form-feedback">
+                <legend>Напишите нам</legend>
+
+                <label for="name">Укажите ваше имя:</label><br>
+                <input type="text" id="name" name="name"><br>
+
+                <label for="email">Электронная почта:</label><br>
+                <input type="email" id="email" name="email"><br>
+
+                <label for="textmessage">Ваше сообщение:</label><br>
+                <input class="textmessage" type="text" id="textmessage" name="textmessage"><br>
+
+                <input type="submit" id="form-btn-submit" value="Отправить">
+            </form>
+            <div class="form-feedback__notification hidden" id="form-feedback__notification">
+                <p>Сообщение отправлено.</p>
+            </div>
+            <div class="form-feedback__notification-error hidden" id="form-feedback__notification-error">
+                <p>Сообщение не отправлено.</p>
+                <p>Ошибка: </p>
+            </div>
+         </div>
+
+        <!-- Центральный отзывы -->
+         <div class="central-feedback">
+            <div class="central-feedback__items">
+                <div class="central-feedback__item center-repair-rent__link">
+                    <div class="central-feedback__top">
+                        <img src="img/feedback-1.jpg" alt="photo-feedback" class="central-feedback__img">
+                        <div class="central-feedback__name-data">
+                            <div class="central-feedback__name">
+                                <p class="central-feedback__name">Артем</p>
+                            </div>
+                            <div class="central-feedback__data">
+                                <p>25 июня 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="central-feedback__stars">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                    </div>
+                    <div class="central-feedback__text">
+                        <p>
+                            Все супер! Инструмент отличный. Рекомендую!
+                        </p>
+                    </div>
+                    <div class="central-feedback__from">
+                        Оставлен на: Авито
+                    </div>
+                </div>
+                <div class="central-feedback__item center-repair-rent__link">
+                    <div class="central-feedback__top">
+                        <img src="./img/feedback-2.png" alt="photo-feedback" class="central-feedback__img">
+                        <div class="central-feedback__name-data">
+                            <div class="central-feedback__name">
+                                <p class="central-feedback__name">Maria N.</p>
+                            </div>
+                            <div class="central-feedback__data">
+                                <p>14 мая 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="central-feedback__stars">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                    </div>
+                    <div class="central-feedback__text">
+                        <p>
+                            Все очень быстро, удобно и качественно. Спасибо продавцу. Буду обязательно Все очень быстро, удобно и качественно. Спасибо продавцу. Буду обязательно обращаться еще
+                        </p>
+                     </div>
+                    <div class="central-feedback__from">
+                        Оставлен на: Яндекс Карты
+                    </div>
+
+                </div>
+                <div class="central-feedback__item center-repair-rent__link">
+                    <div class="central-feedback__top">
+                        <img src="./img/feedback-2.png" alt="photo-feedback" class="central-feedback__img">
+                        <div class="central-feedback__name-data">
+                            <div class="central-feedback__name">
+                                <p class="central-feedback__name">Maria N.</p>
+                            </div>
+                            <div class="central-feedback__data">
+                                <p>14 мая 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="central-feedback__stars">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                    </div>
+                    <div class="central-feedback__text">
+                        <p>
+                            Все очень быстро, удобно и качественно. Спасибо продавцу. Буду обязательно Все очень быстро, удобно и качественно. Спасибо продавцу. Буду обязательно обращаться еще
+                        </p>
+                     </div>
+                    <div class="central-feedback__from">
+                        Оставлен на: Яндекс Карты
+                    </div>
+
+                </div>
+                <div class="central-feedback__item center-repair-rent__link">
+                    <div class="central-feedback__top">
+                        <img src="./img/feedback-2.png" alt="photo-feedback" class="central-feedback__img">
+                        <div class="central-feedback__name-data">
+                            <div class="central-feedback__name">
+                                <p class="central-feedback__name">Maria N.</p>
+                            </div>
+                            <div class="central-feedback__data">
+                                <p>14 мая 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="central-feedback__stars">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                    </div>
+                    <div class="central-feedback__text">
+                        <p>
+                            Все очень быстро, удобно и качественно. Спасибо продавцу. Буду обязательно Все очень быстро, удобно и качественно. Спасибо продавцу. Буду обязательно обращаться еще
+                        </p>
+                     </div>
+                    <div class="central-feedback__from">
+                        Оставлен на: Яндекс Карты
+                    </div>
+
+                </div>
+                <div class="central-feedback__item center-repair-rent__link">
+                    <div class="central-feedback__top">
+                        <img src="./img/feedback-2.png" alt="photo-feedback" class="central-feedback__img">
+                        <div class="central-feedback__name-data">
+                            <div class="central-feedback__name">
+                                <p class="central-feedback__name">Maria N.</p>
+                            </div>
+                            <div class="central-feedback__data">
+                                <p>14 мая 2024</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="central-feedback__stars">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                        <img src="img/star-regular-36.png" alt="feedback-star" class="central-feedback__star">
+                    </div>
+                    <div class="central-feedback__text">
+                        <p>
+                            Все очень быстро, удобно и качественно. Спасибо продавцу. Буду обязательно Все очень быстро, удобно и качественно. Спасибо продавцу. Буду обязательно обращаться еще
+                        </p>
+                     </div>
+                    <div class="central-feedback__from">
+                        Оставлен на: Яндекс Карты
+                    </div>
+
+                </div>
+            </div>
+         </div>
+    
+      <!-- Подключаем Яндекс.Карты -->
+      <div class="yandex-map-box" id="map"></div>
+      <p>Текст</p>
+    </div>
+
+    <!-- Для Яндекс Карт - Начало -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=db57c177-cc00-4b02-89f1-1e99794719a0&lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        ymaps.ready(init);
+        function init(){
+            // Создание карты.
+            var myMap = new ymaps.Map("map", {
+                // Координаты центра карты. Укажите координаты по среднему значению вашего адреса.
+                center: [55.751574, 37.573856], // Москва
+                // Уровень масштабирования. Допустимые значения: от 0 (весь мир) до 19.
+                zoom: 9
+            });
+
+            // Создание метки.
+            var myPlacemark = new ymaps.Placemark([55.785336, 37.235654], {
+                // Данные о метке.
+                balloonContent: 'Мы находимся здесь'
+            });
+
+            // Добавление метки на карту.
+            myMap.geoObjects.add(myPlacemark);
+        }
+    </script>
+    <!-- Для Яндекс Карт - Конец -->
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script type="text/javascript" src="./js/main.js"></script>
+
+</body>
+</html>

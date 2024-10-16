@@ -1,0 +1,669 @@
+html, body {
+    /* background-color: #16036d; */
+}
+
+html {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    display: flex;
+    height: 100vh;
+}
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+img {
+    display: block;
+    max-width: 100%;
+}
+h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+.link__p-semibold {
+    font-weight: 600;
+}
+.shadow {
+    box-shadow: 0px 0px 5px 1px #b8b7b7;
+}
+.br-15 {
+    border-radius: 15px;
+}
+.item-border {
+    box-shadow: 0px 0px 5px 1px #b8b7b7;
+    border-radius: 15px;
+    overflow: hidden;
+}
+.item-border:hover {
+    box-shadow: 0px 0px 15px 1px #008d07;
+}
+
+.burger {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    z-index: 2;
+    display: none;
+    color: rgb(12, 12, 12);
+    cursor: pointer;
+}
+
+/* Левая колонка страницы */
+.left {
+    width: 20%;
+    height: 100%;
+    /* background-color: #99dffa; */
+    position: fixed;
+    top: 0;
+    align-self: flex-start;
+    height: 100vh;
+    overflow: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.left.show {
+    display: flex;
+}
+.logo {
+    /* margin-top: 40px; */
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+.left__menu {
+    margin: 30px 0;
+    width: 90%;
+}
+/* .left__menu.show {
+    display: flex;
+} */
+.left__list {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: center; /* Центровка по горизонтали */
+    padding: 0;
+}
+
+.left__list li {
+    /* margin-bottom: 5px; */
+    width: 100%;
+    display: flex;
+    justify-content: center; /* Центровка содержимого по горизонтали */
+    align-items: center; /* Центровка содержимого по вертикали */
+}
+.left__list a {
+    font-size: 18px;
+    color: rgb(141, 141, 140);
+    display: block;
+    text-align: center; /* Текст по центру */
+    padding: 20px 0 0; /* Внутренние отступы для ссылок */
+    position: relative;
+}
+
+.left__menu-item::before {
+    content: '';
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    background-color: #000000;
+    position: absolute;
+    bottom: -.25rem;
+    left: 50%;
+    transition: width .4s, left .4s;
+}
+
+.left__menu-item:hover::before {
+    width: 100%;
+    left: 0;
+}
+.left__footer {
+    /* background-color: #f8d0d0; */
+}
+.left__footer {
+    width: 90%;
+    margin-bottom: 20px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+.footer__messengers {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 50px;
+}
+.footer__messengers__item {
+    width: 100%;
+}
+.footer__messengers__item a {
+    display: flex;
+    align-items: center;
+}
+.footer__messengers__item img {
+    width: 25px;
+    margin-right: 5px;
+}
+.left__footer__rights {
+    font-size: 14px;
+}
+
+/* Центральный столбец страницы */
+.center {
+    /* background-color: #fca4a4; */
+    /* max-width: 100%; */
+    /* width: 100%; */
+    margin-left: 20%;
+    flex-grow: 1;
+}
+.center__h1 {
+    font-size: 45px;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+/* Темная / Светлая тема */
+.center__label-theme {
+    display: flex;
+}
+.center__label-theme p {
+    text-align: end;
+    margin-right: 10px;
+}
+.center__theme {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 50px;
+    margin-bottom: 20px;
+}
+
+/* Свой четчик время ремонта и аренды */
+.history-work-box {
+	display: flex;
+	flex-direction: column;
+    margin-right: 50px;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+.history-repair {
+	display: flex;
+	justify-content: flex-end;
+    align-items: center;
+	gap: 30px;
+	/* color: #f8bcbc; */
+}
+.history-repair__h2 {
+    font-size: 16px;
+}
+.repair__countdown {
+	display: flex;
+	gap: 20px;
+}
+.repair__time small {
+	font-size: 14px;
+}
+.repair__time h2 {
+    font-size: 14px;
+    text-align: center;
+}
+
+.history-rent {
+	display: flex;
+	justify-content: flex-end;
+    align-items: center;
+	gap: 30px;
+	/* color: #99f9bd; */
+}
+.history-rent__h2 {
+    font-size: 16px;
+}
+.rent__countdown {
+	display: flex;
+	gap: 20px;
+}
+
+.rent__time small {
+	font-size: 14px;
+}
+.rent__time h2 {
+    font-size: 14px;
+    text-align: center;
+}
+
+/* Главный раздел, ремонт и аренда */
+.center-main {
+    width: 100%;
+    display: flex;
+    margin-bottom: 50px;
+}
+.center__p-semibold {
+    margin-top: 10px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+/* Главный раздел - ремонт */
+.center-repair {
+    max-width: 50%;
+    width: 100%;
+    margin: 0 10px;
+    /* background-color: #f8cdcd; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Slider */
+.slider__box {
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    margin-bottom: 20px;
+}
+.slider {
+    background-color: #f3dddd;
+    
+}
+.hidden {
+    display: none;
+}
+.controls {
+    width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+.image-button-left {
+    width: 25px; 
+    height: 50px;
+    background-image: url('../img/btn-left.svg');
+    background-size: cover; /* покрытие всей площади кнопки */
+    border: none; /* убрать стандартную границу */
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 30px;
+}
+.image-button-right {
+    width: 25px; 
+    height: 50px;
+    background-image: url('../img/btn-right.svg');
+    background-size: cover; /* покрытие всей площади кнопки */
+    border: none; /* убрать стандартную границу */
+    background-color: transparent;
+    cursor: pointer;
+    position: absolute;
+    z-index: 2;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 30px;
+}
+.center-repair-rent__link {
+    /* background-color: #f55c5c; */
+    max-width: 600px;
+    width: 100%;
+    text-align: center;
+    padding: 10px;
+    border-radius: 15px;
+    /* margin-bottom: 20px; */
+    box-shadow: 0px 0px 5px #797979;
+}
+.center-repair-rent__link:hover {
+    /* background-color: #99fd99; */
+    box-shadow: 0px 0px 15px 1px #008d07;
+}
+.center-repair__p {
+    font-size: 18px;
+}
+
+/* Центральный раздел - аренда */
+.center-rent {
+    max-width: 50%;
+    width: 100%;
+    margin: 0 10px;
+    /* background-color: #71f5ac; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.center-rent__items {
+    max-height: 480px;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+.center-rent__item {
+    max-width: 150px;
+    /* margin-bottom: 20px; */
+    padding: 5px;
+}
+.center-rent__item img {
+    max-width: 100%;
+}
+.center-rent__p {
+    font-size: 18px;
+}
+
+/* Центральный раздел - Карусель фото */
+.central-carousel__box {
+    margin-bottom: 40px;
+    max-width: 600px;
+}
+.central-carousel___image {
+    margin-bottom: 15px;
+}
+.central-carousel__btns-box {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+.central-carousel__btn:hover {
+    cursor: pointer;
+}
+.central-carousel__btn img {
+    max-height: 45px;
+}
+.central-carousel__btn-img-left {
+    transform: rotate(180deg);
+}
+.central-carousel__btns-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.central-carousel__hrs {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    /* text-align: center; */
+    gap: 3px;
+}
+.central-carousel__hrs hr {
+    width: 30px;
+    background-color: #000000;
+    border: none;
+    margin: 0;
+}
+.central-carousel__hr1 {
+    height: 3px;
+}
+.central-carousel__hr2 {
+    height: 3px;
+}
+.central-carousel__hr3 {
+    height: 3px;
+}
+.central-carousel__hr4 {
+    height: 3px;
+}
+.active {
+    height: 7px;
+}
+
+/* Центральный калькулятор аренды */
+.central-calc-rent {
+    max-width: 700px;
+    display: inline-flexbox;
+    margin-bottom: 40px;
+    padding: 15px;
+}
+.central-calc-rent h3 {
+    text-align: center;
+}
+.central-calc-rent__box {
+    padding-top: 20px;
+}
+.central-calc-rent-form {
+    display: flex;
+    gap: 20px;
+}
+.central-calc-rent__add-tool {
+    margin-top: 10px;
+    text-align: center;
+}
+.central-calc-rent__add-tool button {
+    background-color: #ffffff;
+    border-style: none;
+    border-width: 1px;
+}
+.central-calc-rent__btn-image:hover {
+    cursor: pointer;
+}
+.central-calc-rent__image {
+    width: 30px;
+}
+.central-calc-rent__days {
+    display: flex;
+}
+.central-calc-rent__days-p {
+    width: 135px;
+}
+.central-calc-rent__days input {
+    width: 50px;
+}
+.central-calc-rent__tool {
+    display: flex;
+    gap: 20px;
+    margin-top: 10px;
+}
+.central-calc-rent__tool-text {
+    width: 115px;
+}
+.central-calc-rent__tool-text2 {
+    width: 72px;
+    text-align: right;
+}
+.central-calc-rent__result {
+    max-height: 132px;
+    /* background-color: #ccf79c; */
+    padding: 20px;
+}
+.central-calc-rent__result h4 {
+    margin-bottom: 10px;
+    text-align: center;
+}
+.central-calc-rent__result p{
+    margin-top: 5px;
+}
+
+/* Форма обратной связи */
+.form-feedback {
+    display: inline-flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    border-style: dashed;
+    border-width: 1px;
+    padding: 20px;
+}
+.form-feedback legend {
+    margin-bottom: 15px;
+}
+.form-feedback input {
+    margin-bottom: 15px;
+}
+.textmessage {
+    min-width: 250px;
+    min-height: 100px;
+}
+.form-feedback__notification {
+    background-color: #97f3ba;
+    text-align: center;
+    padding: 7px;
+    border-radius: 10px;
+}
+.form-feedback__notification-error {
+    background-color: #fa7474;
+    text-align: center;
+    padding: 7px;
+    border-radius: 10px;
+}
+
+/* Цетральный - Отзывы Feedback */
+.central-feedback {
+    padding-bottom: 100px;
+}
+.central-feedback__item {
+    width: 300px;
+    max-height: 200px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+.central-feedback__top {
+    max-height: 50px;
+    height: 100%;
+    display: flex;
+}
+.central-feedback__img {
+    height: 50px;
+    margin-right: 5px;
+}
+.central-feedback__name-data {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.central-feedback__name {
+    font-weight: 600;
+    margin-bottom: 2px;
+    text-align: start;
+}
+.central-feedback__date {
+}
+.central-feedback__stars {
+    display: flex;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.central-feedback__star {
+    height: 20px;
+}
+.central-feedback__text {
+    text-align: start;
+    margin-bottom: 10px;
+    height: 3em; /* Высота контейнера (зависит от количества строк) */
+    overflow: hidden; /* Прячет переполняющий текст */
+    display: -webkit-box; /* Нужен для использования line-clamp */
+    -webkit-box-orient: vertical; /* Вертикальное ведение коробок */
+    -webkit-line-clamp: 3; /* Максимум строк */
+    line-clamp: 3; /* Поддержка для других браузеров */
+    line-height: 1em; /* Высота строки */
+}
+.central-feedback__from {
+    text-align: end;
+    color: #797979;
+}
+.yandex-map-box {
+  width: 500px;
+  height: 400px;
+  margin-left: 20px;
+  margin-bottom: 100px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #797979;
+}
+
+
+/* Мобильная версия */
+/* Меньше и равно: */
+@media (max-width: 1325px) {
+    .item-2, .item-6 {
+        display: none;
+    }
+    .center__h1 {
+        font-size: 35px;
+    }
+}
+
+@media (max-width: 768px) {
+    .center__h1 {
+        margin-top: 80px;
+    }
+    .burger {
+        display: flex;
+    }
+    .history-work-box {
+        margin: 0 10px;
+    }
+    .history-rent__h2, .history-repair__h2 {
+        font-size: 24px;
+    }
+    .left {
+        position: fixed;
+        top: 80px;
+        right: 30px;
+        display: none;
+        justify-content: space-between;
+        height: 50%;
+        background-color: #fff;
+        box-shadow: 0px 0px 5px 1px #b8b7b7;
+        border-radius: 25px;
+        /* border-width: 2px; */
+        /* background-color: rgba(177, 247, 186, 0.5);
+        backdrop-filter: blur(3px);
+        border-style: dashed; */
+        max-width: 50%;
+        width: 100%;
+        z-index: 1;
+    }
+    .left__list li a {
+        padding: 5px;
+        font-size: 30px;
+        color: rgb(0, 0, 0);
+    }
+    .left__menu {
+        margin: 5px 0;
+    }
+    .left__footer {
+        margin-bottom: 5px;
+        padding: 5px 0;
+        gap: 15px;
+    }
+    .footer__messengers {
+        margin-bottom: 5px;
+    }
+    .logo {
+        display: none;
+    }
+    .center {
+        margin-left: 0;
+    }
+    .center-main {
+        flex-direction: column;
+        align-items: center;
+    }
+    .center-repair {
+        max-width: 100%;
+        margin: 0 30px;
+    }
+    .center-rent {
+        max-width: 100%;
+        margin: 0 30px;
+    }
+}
+
